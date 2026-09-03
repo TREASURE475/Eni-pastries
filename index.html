@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eni Pastries | Delicious Fresh Bakes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Welcome / Splash Landing Screen -->
+    <div id="welcome-screen">
+        <div class="welcome-overlay"></div>
+        <div class="welcome-content">
+            <h1>Welcome to Eni Pastries</h1>
+            <p>Freshly baked, beautifully crafted, delivered right to your door.</p>
+            <button class="welcome-btn" onclick="enterStore()">Click to See Products</button>
+        </div>
+    </div>
+
+    <!-- Main Website (Hidden initially until user clicks) -->
+    <div id="main-site" style="display: none;">
+        
+        <!-- Navigation Bar -->
+  <nav>
+  <div class="nav-left">
+    <button class="back-welcome-btn" onclick="showWelcomeScreen()">← Welcome</button>
+    <div class="logo">Eni Pastries</div>
+  </div>
+
+  <!-- Hamburger Button -->
+  <button class="menu-btn" id="menuToggle" type="button" aria-label="Toggle navigation">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <!-- Preserved your exact onclick functions inside the nav menu -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
+    <li><a href="#" onclick="showPage('about')">About Us</a></li>
+    <li><a href="#" onclick="showPage('help')">Help</a></li>
+  </ul>
+</nav>
+
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1>Tracy patries</h1>
+                <p>Explore our delicious cakes, pastries, and treats, and order directly via WhatsApp.</p>
+                <a href="#catalog" class="cta-btn">Browse Products</a>
+            </div>
+
+            <div class="catalog" id="catalog">
+                <h2 class="section-title">Our Pastries</h2>
+                <div class="products-grid">
+                    
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="red velvet.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">Red velvet Cake</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('Red velvet Cake', '7,000frs-15,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <img src="Black forest cake.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">Black forest cake</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('Black forest cake', '7,000frs-15,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <img src="cheese cake.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">cheese cake</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('cheese cake', '7,000frs-15,000frs ')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <img src="cheese.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title"cheese></h3>
+                            <div class="product-price">1,500frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('cheese','1,500frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 5 -->
+                    <div class="product-card">
+                        <img src="chocolate.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">chocolate cake</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('chocolate cake', '7,000frs-15,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 6 -->
+                    <div class="product-card">
+                        <img src="cup cake.JPG" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">cup cake</h3>
+                            <div class="product-price">2,000frs-8,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('cup cake', '2,000frs-8,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 7 -->
+                    <div class="product-card">
+                        <img src="cupcakes.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">cupcakes</h3>
+                            <div class="product-price">5,00frs-1,500frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('cupcakes', '500frs-1,500frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 8 -->
+                    <div class="product-card">
+                        <img src="Donuts.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">Donuts</h3>
+                            <div class="product-price">25frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('Donuts', '25frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 9 -->
+                    <div class="product-card">
+                        <img src="fruit cake.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">fruit cake</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('fruit cake', '7,000frs-15,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 10 -->
+                    <div class="product-card">
+                        <img src="lemond cake.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">lemond cake</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('lemond cake', '7,000frs-15,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 11 -->
+                    <div class="product-card">
+                        <img src="red velvet.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">Red velvet Cake</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('Red velvet Cake', '7,000frs-15,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 12 -->
+                    <div class="product-card">
+                        <img src="moon.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">moon design cake</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('moon design cake', '7,000frs-15,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 13 -->
+                    <div class="product-card">
+                        <img src="pink.JPG" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">pink vanilla cakee</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('pink vanilla cake', '7,000frs-15,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 14 -->
+                    <div class="product-card">
+                        <img src="Rainbow.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">Rainbow cake</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('Rainbow cake', '7,000frs-15,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 15 -->
+                    <div class="product-card">
+                        <img src="red.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">simple red vanila cake</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('simple red vanilla', '7,000frs-15,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 16 -->
+                    <div class="product-card">
+                        <img src="sachet.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">sachet Donuts</h3>
+                            <div class="product-price">500frs each</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('sachet dunuts', '500frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 17 -->
+                    <div class="product-card">
+                        <img src="traditional.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">Traditional cake</h3>
+                            <div class="product-price">19,000frs-30,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('Traditional cake', '19,000frs-30,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 18 -->
+                    <div class="product-card">
+                        <img src="vanila.jpg" alt="Quality Cake" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                        <div class="product-details">
+                            <h3 class="product-title">White cake</h3>
+                            <div class="product-price">7,000frs-15,000frs</div>
+                            <p class="product-desc">Moist, flavorful, and beautifully decorated custom cakes for birthdays and events.</p>
+                            <button class="order-btn" onclick="openOrderModal('white cake', '7,000frs-15,000frs')">Order via WhatsApp</button>
+                        </div>
+                    </div>
+</div>
+</div>
+</div>
+</div>
+        <!-- About Page -->
+        <div id="about" class="page">
+            <div class="container">
+                <h2>About Eni Pastries</h2>
+                <p>.Welcome to Eni Pastries! We specialize in creating high-quality, delicious baked goods made from the finest ingredients.</p>
+                <p>1. We offer freshly baked products .</p>
+                <p>2. We diliver on time and quality servises.</p>
+                <h2>OUR GOAL</h2>
+                <P>- To deliver quality products while making  sure to satisfy the costomer  </P>
+                <h2>Why order from us?</h2>
+                <p>1. Affordable prices </p>
+                <p>2. fast customer support</p>
+                <p>3. Easy whatapp ordering</p>
+                <p>Quality products</p>
+                <a href="https://wa.me/237674460464" target="_blank" class="whatsapp-btn">
+  Chat with us on WhatsApp
+</a>
+            </div>
+        </div>
+
+        <!-- Help Page -->
+        <div id="help" class="page">
+            <div class="container">
+                <h2>Help & Support</h2>
+                <p><strong>.How to Place an Order:</strong></p>
+                <p>1. Click "Order via WhatsApp" under your chosen pastry.<br>
+                   2. Enter your phone number, and delivery address.<br>
+                   3. You will be redirected to WhatsApp with a pre-filled message detailing your order!</p>
+                <p><strong>Delivery:</strong></p>
+                <p>We confirm order timing and delivery specifics immediately via WhatsApp chat.</p>
+            </div>
+        </div>
+
+        <!-- Customer Address Modal -->
+        <div class="modal" id="orderModal">
+            <div class="modal-content">
+                <h3>Enter Delivery Details</h3>
+                <p id="modalProductInfo" style="margin: 0.5rem 0 1rem 0; color: #666;"></p>
+                <form id="orderForm" onsubmit="return sendWhatsApp(event)">
+                    <div class="form-group">
+                        <label for="custName">Full Name</label>
+                        <input type="text" id="custName" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="custPhone">Phone Number</label>
+                        <input type="tel" id="custPhone" required placeholder="+1234567890">
+                    </div>
+                    <div class="form-group">
+                        <label for="custAddress">Delivery Address</label>
+                        <textarea id="custAddress" rows="3" required placeholder="Street name, house number, city, area"></textarea>
+                    </div>
+                    <div class="modal-buttons">
+                        <button type="button" class="cancel-btn" onclick="closeOrderModal()">Cancel</button>
+                        <button type="submit" class="order-btn" style="width: 50%;">Send to WhatsApp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+<!-- Full Screen Image Modal -->
+<div id="imageLightbox" class="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" class="lightbox-content" alt="Full Screen Pastry Image">
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
